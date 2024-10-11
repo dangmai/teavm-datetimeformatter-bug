@@ -7,6 +7,12 @@ public class App {
   public static void main(String[] args) {
     System.out.println(
         (new DateTimeFormatterBuilder()).append(
+            DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))
+            .toFormatter()
+            .parse("2018-01-02T03:04:05")
+            .toString());
+    System.out.println(
+        (new DateTimeFormatterBuilder()).append(
             DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssz"))
             .toFormatter()
             .parse("2018-01-02T03:04:05+01:00")
