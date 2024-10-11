@@ -40,4 +40,6 @@ application {
 teavm.js {
   mainClass = "org.example.App"
   addedToWebApp = true
+  properties.put("java.util.TimeZone.autodetect", "true")
+  properties.put("java.util.Locale.available", "en_EN, en_US, en_GB, ru_RU")
 }
